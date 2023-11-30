@@ -26,10 +26,11 @@ public class Stack<T> {
         T poppedData = null;
         if (!isEmpty()) {
             poppedData = linkedList.getLast();
-            linkedList.pop();
+            linkedList.removeLast(); // Corrected line
         }
         return poppedData;
     }
+
     /*
      * @name: peek
      * @desc: Returns the element at the top of the stack without removing it.
@@ -42,13 +43,13 @@ public class Stack<T> {
         }
         return topData;
     }
-
     /*
      * @name: isEmpty
      * @desc: Checks if the stack is empty.
      * @return: boolean true if stack is empty, false otherwise
      */
     public boolean isEmpty() {
-        return linkedList.getFirst() == null;
+        return linkedList.isEmpty();
     }
+
 }
