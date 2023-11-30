@@ -1,5 +1,9 @@
 import java.util.LinkedList;
-
+/*
+ * @name: Stack
+ * @desc: stack implemented using a linked list.
+ * @param: T generic type
+ */
 public class Stack<T> {
     private LinkedList<T> linkedList;
 
