@@ -24,4 +24,5 @@ public class QueueJunitTest {
         // Check isEmpty after dequeuing all elements
         assertTrue(queue.isEmpty());
     }
+    
 }
