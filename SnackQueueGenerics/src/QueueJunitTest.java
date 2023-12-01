@@ -1,7 +1,6 @@
 import org.junit.Test;
 
-import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertTrue;
+import static junit.framework.TestCase.*;
 
 public class QueueJunitTest {
     @Test
@@ -16,7 +15,22 @@ public class QueueJunitTest {
         // Check front
         assertEquals(56, queue.front().intValue());
 
-        // Check dequeue
+        // Check isEmpty after dequeuing all elements
+        assertFalse(queue.isEmpty());
+    }
+    @Test
+    public void testDequeueOperations() {
+        Queue<Integer> queue = new Queue<>();
+
+        // Enqueue elements
+        queue.enqueue(56);
+        queue.enqueue(30);
+        queue.enqueue(70);
+
+        // Check front
+        assertEquals(56, queue.front().intValue());
+
+        // Dequeue elements
         assertEquals(56, queue.dequeue().intValue());
         assertEquals(30, queue.dequeue().intValue());
         assertEquals(70, queue.dequeue().intValue());
@@ -24,5 +38,4 @@ public class QueueJunitTest {
         // Check isEmpty after dequeuing all elements
         assertTrue(queue.isEmpty());
     }
-    
 }
