@@ -43,7 +43,7 @@ public class Stack<T> {
     public T peek() {
         T topData = null;
         if (!isEmpty()) {
-            topData = linkedList.getFirst();
+            topData = linkedList.getLast();
         }
         return topData;
     }
